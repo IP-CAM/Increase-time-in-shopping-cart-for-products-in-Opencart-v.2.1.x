@@ -6,7 +6,7 @@
 		>
 		<id><![CDATA[[VQMOD] Opencart v2.1.x: Increase time in shopping cart for products]]></id>
 		<version>0.1.0</version>
-		<vqmver>2.6.3</vqmver>
+		<vqmver>2.6.4</vqmver>
 		<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
 		<file path="system/library/" name="cart.php" error="log">
 			<operation error="skip">
