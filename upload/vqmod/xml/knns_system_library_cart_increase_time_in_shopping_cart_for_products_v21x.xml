@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<modification
+		xmlns="https://github.com/vqmod/vqmod"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd"
+		>
+		<id><![CDATA[[VQMOD] Opencart v2.1.x: Increase time in shopping cart for products]]></id>
+		<version>0.1.0</version>
+		<vqmver>2.6.3</vqmver>
+		<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
+		<file path="system/library/" name="cart.php" error="log">
+			<operation error="skip">
+				<search position="replace"><![CDATA[$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE (api_id > '0' OR customer_id = '0') AND date_added < DATE_SUB(NOW(), INTERVAL 1 HOUR)");]]></search>
+				<add><![CDATA[		$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE (api_id > '0' OR customer_id = '0') AND date_added < DATE_SUB(NOW(), INTERVAL 12 HOUR)");]]></add>
+			</operation>
+		</file>
+	</modification>
